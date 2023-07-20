@@ -1,27 +1,31 @@
-# Optimize-PakChoi-Growth-Environment
-## Optimize Growth Environment Competition at KIST강릉분원
+# Optimize Growth Environment Competition
 
-<2022.04.18 ~ 2022.05.20 16:59>
+- **Organiser**: KIST(Korea Institute of Science and Technology) Gangneung
+- **Period**: 18th Apr - 20th May, 2022
+
 https://dacon.io/competitions/official/235897/overview/description
 
-청경채의 성장도를 예측.
+## Subject
+### Leaf area prediction algorithm using pak choi pictures and environmental data.  
+(청경채 사진과 환경 데이터를 활용한 잎면적 예측 알고리즘 개발)  
 
 110th 😜
-***
+
 ## Summary
-1. Regnet을 사용하였지만 data의 특성을 파악하지 못하여 그에 알맞게 값을 제공하지 않아 원하는 성능을 발휘하지 못했다.
-2. Lamb, AdamW, AdamP optimizer를 사용했다. 그 중 AdamP가 제일 안정적인 성능을 보였다.
+1. **Regnet** was used, but it did not identify features of the data, so that did not provide correct output. Consequently, we did not achieve the desired performance. 
+2. We used Lamb, AdamW, and AdamP optimisers, of which AdamP had the most stable performance.
 
 
 ## Feature
-1. 8개의 model씩 ensemble하여 결과로 사용했다.
-2. Regression보다 recognition에 특화된 model.
+1. We **ensembled** 8 models and used them as results.
+2. This model specialises in recognition rather than regression
 
 ## To do
-1. EDA를 통하여 data의 특징 파악하기.
-2. Preprocessing을 통하여 EDA에서 나온 결과에 맞게 모델 변형(Regression에 맞게)시키기.
+1. Identify the features of pak choi pictures and environmental data with EDA.
+2. Make our model suitable for regression (not recognition) based on the EDA results.  
+   (The best model in this competition was **Polynomial regression**)
 
 ## P.S.
+- Data CASE59 has duplicates and errors (remove and used the dataset).
 - Data in drive: 3526
-- Data CASE59는 중복 및 오류를 가지고 있다(제거하고 사용하기).
 - Pretrained models: 3526
